@@ -167,14 +167,6 @@ fun ImageCropper(
             cropState.updateProperties(cropProperties)
         }
 
-        /// Create a MutableTransitionState<Boolean> for the AnimatedVisibility.
-        var visible by remember { mutableStateOf(false) }
-
-        LaunchedEffect(Unit) {
-            delay(100)
-            visible = true
-        }
-
         ImageCropper(
             modifier = imageModifier,
             imageBitmap = imageBitmap,
